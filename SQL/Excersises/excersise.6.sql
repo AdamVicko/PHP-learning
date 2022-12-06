@@ -91,26 +91,19 @@ values
 (null,219,'Irokeza')
 ;
 
-insert into brat(sifra,nausnica,treciputa,narukvica)
+insert into brat(sifra,nausnica,treciputa,narukvica,prijatelj)
 values 
-(null,3,'2021-10-19 12:34:04',0),
-(null,5,'2015-01-24 11:39:10',5),
-(null,0,'2019-11-18 10:43:00',0)
+(null,3,'2021-10-19 12:34:04',0,1),
+(null,5,'2015-01-24 11:39:10',5,2),
+(null,0,'2019-11-18 10:43:00',0,3)
 ;
 
 
-insert into zena(sifra,novcica,narukvica,dukserica)
+insert into zena(sifra,novcica,narukvica,dukserica,brat)
 values 
-(null,'1589.24',2,'Dukserica je uvijek poderana'),
-(null,'189.78',0,'Dukserica nije njegova'),
-(null,'26457.20',7,'Uvijek zaprljana')
-;
-
-insert into svekrva(sifra,hlace,suknja,ogrlica,treciputa,dukserica,narukvica)
-values
-(null,'Jako kratke hlace','Samo dugacke suknje',18,'2020-07-14 16:45:02','Ne nosi dukserice',2),
-(null,'Uske hlace','Samo sarene suknje',1,'2021-04-04 12:35:22','Samo roze dukserice',7),
-(null,'Jako kratke hlace s cvijetekima','Ne nosi suknje',8,'1995-08-24 10:55:02','Dugacke sa visokim ovratnikom',14)
+(null,'1589.24',2,'Dukserica je uvijek poderana',1),
+(null,'189.78',0,'Dukserica nije njegova',2),
+(null,'26457.20',7,'Uvijek zaprljana',3)
 ;
 
 insert into punac(sifra,ekstrovertno,suknja,majica,prviputa)
@@ -118,6 +111,13 @@ values
 (null,1,'Ne nosi on suknje','Samo tank top','2011-04-12 21:41:13'),
 (null,0,'Ne nosi on suknje','Samo zute','2010-07-12 20:37:02'),
 (null,1,'Ne nosi on suknje','Samo tamne','2001-05-12 01:51:59')
+;
+
+insert into svekrva(sifra,hlace,suknja,ogrlica,treciputa,dukserica,narukvica,punac)
+values
+(null,'Jako kratke hlace','Samo dugacke suknje',18,'2020-07-14 16:45:02','Ne nosi dukserice',2,1),
+(null,'Uske hlace','Samo sarene suknje',1,'2021-04-04 12:35:22','Samo roze dukserice',7,2),
+(null,'Jako kratke hlace s cvijetekima','Ne nosi suknje',8,'1995-08-24 10:55:02','Dugacke sa visokim ovratnikom',14,3)
 ;
 
 insert into ostavljena(sifra,prviputa,kratkamajica,drugiputa)

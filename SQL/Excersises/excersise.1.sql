@@ -89,17 +89,6 @@ alter table cura add foreign key (punac) references punac(sifra);
 
 
 
-insert into muskarac(sifra,bojaociju,hlace,modelnaocala,maraka,zena)
-values(null,'Plavuskasta','Jako velike hlacice','Jako male naocale model dermatitis','225,49',null),
-(null,'Tozu','Jako male hlacice','Jako male naocale model zumberackogorje','22,49',null),
-(null,'Bijela','Nenosi hlace','Jako male naocale model Tuzla','356,00',null);
-
-insert into zena(sifra,treciputa,hlace,kratkamajica,jmbag,bojaociju,haljina,sestra)
-values
-(null,'2001-04-24 23-14-09','Nenosi','Jako kratka majca','rzen57d8493','Zute oci','Uska haljina iznad koljena',null),
-(null,'2001-04-24 05-47-48','Nenosi puno','Jako kratka majca iznad brade','rzen57d8493','Zudddddddddte oci','Uska haljinaaaaaaaaaaaaaaa iznad koljena',null),
-(null,'2001-11-05 13-14-09','Nenosi','Jako kraddddddddtka majca','rzen57d8493','Zute oddddddddci','Uska haljinadddddddddddd iznad koljena',null);
-
 insert into sestra(sifra,haljina,hlace)
 values
 (1,'Ne nosi','Nosi'),
@@ -108,11 +97,22 @@ values
 (4,'Ne nosi','Ne nosi jos'),
 (5,'Nosi','Nnosi');
 
-insert into mladic(sifra,suknja,kuna,ekstrovertno,dukserica)
+insert into zena(sifra,treciputa,hlace,kratkamajica,jmbag,bojaociju,haljina,sestra)
 values
-(null,'Ne nosi','15.20',1,'Uvijek nosi'),
-(null,'Ne nosi kad nemora','15000.00',0,'Nosi kad pada kisa'),
-(null,'Ne nosi','258.20',1,'Samo na potkusulju');
+(null,'2001-04-24 23-14-09','Ne nosi','Jako kratka majca','rzen57d8493','Zute oci','Uska haljina iznad koljena',1),
+(null,'2001-04-24 05-47-48','Ne nosi puno','Jako kratka majca iznad brade','rzen57d8493','Zudddddddddte oci','Uska haljinaaaaaaaaaaaaaaa iznad koljena',2),
+(null,'2001-11-05 13-14-09','Ne nosi','Jako kraddddddddtka majca','rzen57d8493','Zute oddddddddci','Uska haljinadddddddddddd iznad koljena',3);
+
+insert into muskarac(sifra,bojaociju,hlace,modelnaocala,maraka,zena)
+values(null,'Plavuskasta','Jako velike hlacice','Jako male naocale model dermatitis','225,49',1),
+(null,'Tozu','Jako male hlacice','Jako male naocale model zumberackogorje','22,49',2),
+(null,'Bijela','Nenosi hlace','Jako male naocale model Tuzla','356,00',3);
+
+insert into mladic(sifra,suknja,kuna,ekstrovertno,dukserica,muskarac)
+values
+(null,'Ne nosi','15.20',1,'Uvijek nosi',1),
+(null,'Ne nosi kad nemora','15000.00',0,'Nosi kad pada kisa',2),
+(null,'Ne nosi','258.20',1,'Samo na potkusulju',3);
 
 insert into svekar(sifra,dukserica)
 values 
@@ -125,6 +125,18 @@ values
 (null,1,1),
 (null,2,2),
 (null,3,3);
+
+insert into punac(sifra)
+values
+(null),
+(null),
+(null);
+
+insert into cura(punac)
+values
+(1),
+(2),
+(3);
 
 update cura set gustoca=15.77;
 
