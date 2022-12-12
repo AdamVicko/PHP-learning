@@ -138,6 +138,8 @@ values
 (2),
 (3);
 
+
+/* SQL
 update cura set gustoca=15.77;
 
 delete from mladic 
@@ -145,6 +147,20 @@ where kuna>15.78;
 
 select kratkamajica from zena
 where hlace like'%ne%';
+
+________________FUNCTION___________________________
+select eks1(kratkamajica,hlace) as eks1 from zena;
+
+DELIMITER $$
+create function eks1(kratkamajica varchar(31), hlace varchar(46)) returns varchar(255)
+begin
+	
+	return (select kratkamajica where hlace like '%ne%');
+
+end;
+$$
+DELIMITER ;
+_____________________________________________________
 
 select a.dukserica , f.asocijalno , e.hlace 
 from svekar a
@@ -161,5 +177,5 @@ select a.haljina , a.maraka
 from sestra a
 left join sestra_svekar b on a.sifra = b.sestra 
 where b.svekar is null ;
-
+*/
 
