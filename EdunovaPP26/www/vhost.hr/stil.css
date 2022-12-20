@@ -1,0 +1,28 @@
+/* 1. mjesto: vanjska datoteka - best practice */
+
+/* Načini primjere CSS-a*/
+/* SELEKTOR elementa */
+body{
+    background-color: purple;
+}
+
+h1{
+    font-size: 0.1rem;
+    font-family: arial, sans-serif;
+}
+
+/* SELEKTOR klase */
+
+.plava{
+    color: #00f;
+    text-indent: 0.8rem;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid red;
+}
+
+/* SELEKTOR identifikacije */
+
+#veliko{
+    font-size: 4rem;
+}

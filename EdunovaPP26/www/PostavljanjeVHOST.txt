@@ -1,0 +1,39 @@
+Postavljanje VHOST
+
+Unutar direktorija EdunovaPP26 
+kreirati direktorij www 
+te unutar www 
+kreirati direktorij vhost.hr
+
+
+otvoriti datoteku
+C:\xampp\apache\conf\extra\httpd-vhosts.conf 
+
+Na kraju datoteke dodati (koristiti /(SHIFT+7) umjesto standard windows \(AltGr + q))
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot "C:/Users/dell/Documents/EdunovaPP26/www/vhost.hr"
+    ServerName vhost.hr
+    ServerAlias www.vhost.hr
+    ErrorLog "logs/dummy-host.example.com-error.log"
+    CustomLog "logs/dummy-host.example.com-access.log" common
+    <Directory "C:/Users/dell/Documents/EdunovaPP26/www/vhost.hr/">
+         Options FollowSymLinks Indexes
+         AllowOverride All
+         Require all granted
+    </Directory>
+</VirtualHost>
+
+u datoteci C:\Windows\System32\drivers\etc\hosts
+dodati liniju
+127.0.0.1 vhost.hr
+
+te restart (stop/start) apache servera u XAMPP control panelu
+
+otići na adresu http://vhost.hr
+i mora se javiti sadržaj iz direktorija C:/Users/dell/Documents/EdunovaPP25/WWW/vhostPrimjer
+
+ZADATAK:
+Kreirati domenu ucenjephp.hr
+
+

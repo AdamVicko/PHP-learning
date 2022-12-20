@@ -1,0 +1,5 @@
+# Ako želim resetirati lokalne promjene na server
+# CMD
+# cd $projectHome
+git reset --hard
+git push -f origin main
