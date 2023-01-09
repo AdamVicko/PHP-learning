@@ -18,3 +18,4 @@ if($b1===$b2){
 // stranica prima TRI broja putem GET parametara
 // stranica ispisuje najmanji broj
 // Ako su svi brojevi jednaki, stranica ispisuje: jednaki su
+?>

@@ -106,7 +106,7 @@ if(isset($_GET['broj'])){
     echo 'Postavite GET parametar broj', '<br>';
 }
 // https://www.php.net/manual/en/function.isset.php
-$b = isset($_GET['b']) ? $_GET['b'] : 0;
+$b = isset($_GET['b']) ? $_GET['b'] : 8;
 
 
 // mi smo sigurni da će postojati vrijednost u varijabli b
